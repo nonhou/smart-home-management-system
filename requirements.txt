@@ -1,0 +1,2 @@
+# 本项目为 Node-RED + MySQL，无 Python 依赖。
+# Node-RED 依赖见 README 的「环境要求」一节。

@@ -1,0 +1,3884 @@
+[
+    {
+        "id": "3f36a35ffad1a35a",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9c4c7650ccd88332",
+        "type": "tab",
+        "label": "智能家居管理系统",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b0cddfc99580a27e",
+        "type": "tab",
+        "label": "智能家居测试数据生成",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5838f3f1c3b4cb4f",
+        "type": "tab",
+        "label": "电量统计图表修复",
+        "disabled": false,
+        "info": "智能家居电量统计图表显示修复流程",
+        "env": []
+    },
+    {
+        "id": "aa431b6950d07102",
+        "type": "tab",
+        "label": "智能家居报警系统",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7959bc382caae1df",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "智能家居管理系统",
+            "hideToolbar": "false",
+            "lockMenu": "false",
+            "allowSwipe": "false",
+            "dateFormat": "YYYY-MM-DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "control-tab",
+        "type": "ui_tab",
+        "name": "设备控制",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "monitor-tab",
+        "type": "ui_tab",
+        "name": "电量监测",
+        "icon": "show_chart",
+        "order": 2
+    },
+    {
+        "id": "stats-tab",
+        "type": "ui_tab",
+        "name": "电量统计",
+        "icon": "bar_chart",
+        "order": 3
+    },
+    {
+        "id": "alert-tab",
+        "type": "ui_tab",
+        "name": "异常报警",
+        "icon": "warning",
+        "order": 4
+    },
+    {
+        "id": "control-group",
+        "type": "ui_group",
+        "name": "设备控制",
+        "tab": "control-tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "batch-group",
+        "type": "ui_group",
+        "name": "批量控制",
+        "tab": "control-tab",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "realtime-group",
+        "type": "ui_group",
+        "name": "实时监测",
+        "tab": "monitor-tab",
+        "order": 1,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "mysql-config-chart",
+        "type": "MySQLdatabase",
+        "name": "智能家居数据库",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "smart_home",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "9a41806c9a674091",
+        "type": "ui_tab",
+        "name": "生成数据",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f8ddc721c22a0681",
+        "type": "ui_group",
+        "name": "测试数据生成控制",
+        "tab": "9a41806c9a674091",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "333aa5a9bd9ce156",
+        "type": "ui_group",
+        "name": "主显示区",
+        "tab": "stats-tab",
+        "order": 1,
+        "disp": true,
+        "width": 30,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5eefe9726cb0f787",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 1,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "e6466dd1156774c9",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 3,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "5329311313f364d7",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "a2ad3c4dc678ec4d",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 6,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "9571fd6e7dc6735b",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 7,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "710271f01b9343e8",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 12,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "49d3de904835e1a7",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 13,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "2cf487a183def201",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 15,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "3a2399b5aee420cc",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 16,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "a3b357aceabd61df",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 21,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "82e415be63115627",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 22,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "dfed2acb9543f43a",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 25,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "ea9f65b4e1a1a2c0",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 26,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a2781c4f07af1496",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 27,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "3e33eda62eddc348",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 28,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0ad431a4d83f2c41",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 29,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "4ac65c6594b7e566",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 30,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "31b7bbeff4558f14",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 31,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "8f80a753b52a8c85",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 32,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "07597e6ca9b07494",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 33,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "64813b7b4db1eca9",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 34,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "14c7a51d81bd2334",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 35,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "08dd2386e72763f6",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 36,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "59241934daca7f5d",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 39,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "2bdc591bed8ad51f",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 40,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "64587b657642c259",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 41,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "2fcce1b4f87678e0",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 42,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ea73480cefe245a1",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 43,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "65cce6c5fd78965a",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 44,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b67db12805244913",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 45,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "8a8658bf5e990b92",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 46,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "31a46b7bbdf105bb",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 47,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "10b83ebd40461165",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 48,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0579ec2c512a17ea",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 49,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "a8ade7a4be3968b4",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 50,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "43ee6e380093e80e",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 53,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "a2c663aabd91ca43",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 54,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "47c61afa2c79388f",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 55,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "93521932fa79b364",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 56,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "969af488b020091b",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 57,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e9eea17a8eb682a3",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 58,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ba402bafeba03eba",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 59,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "a32a90beb358c232",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 60,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a0807d011566f42f",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 61,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "fa78c1811f5337ef",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 62,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7cdec02d5005a57e",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 63,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "fdd5c598ef32cccb",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 64,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7e80c9fb1f922253",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 67,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e9819ae16e96335d",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 68,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7c74de0816173c3f",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 69,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e2abe0ea7e3cf879",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 70,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d53a05d5054e54bc",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 71,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "580836a6c5e6b4aa",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 72,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "70d2f0ef67f90c70",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 73,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "ce7097bcf14855e3",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 74,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c21775b6c37c8011",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 75,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "9075d50badab43f3",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 76,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d2be41674c34a12e",
+        "type": "ui_spacer",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "spacer",
+        "group": "333aa5a9bd9ce156",
+        "order": 77,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "11d4711b1164bb45",
+        "type": "ui_group",
+        "name": "报警监控",
+        "tab": "alert-tab",
+        "order": 1,
+        "disp": true,
+        "width": 21
+    },
+    {
+        "id": "7dafe6d78f02fbe0",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 1,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "a678f356b4ba1732",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 3,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "45d841ec942da96a",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 4,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "59a32de8191bb218",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 5,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "730a4c700edaec21",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 6,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "b59bed98d804bafd",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 7,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "027bb4cedeb4c6fd",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 8,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "350afc58304cec8f",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 9,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "76b2de0d09638b13",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 10,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "36647e0abb033688",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 11,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "af7e2ad5735e6a18",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 12,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "5b162b2d7291b1f2",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 13,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "6525fd2647932694",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 14,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "4ac6310ef4bdfd6a",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 15,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "9827e2d49b1bdac4",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 16,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "fae1f9bd8d9150d8",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 17,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "88abc64889403291",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 18,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "0679990c293193ba",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 19,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "9bb0e2a9e17e87fa",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 20,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "bdf53423e2c51aad",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 21,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "b5963e6943d6febf",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 22,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f739fa5883339a0f",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 27,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "e2a4796acd899e16",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 28,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "5ab43bd7bdd627e0",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 31,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "c4bdc23edee02bd0",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 32,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "4e415c2ac099a80e",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 34,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "f01edde3da01adc6",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 35,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "48309b79e33f6b8b",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 37,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "6b154db0c76b85d6",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 38,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "da1d822a0312b8f0",
+        "type": "ui_spacer",
+        "z": "aa431b6950d07102",
+        "name": "spacer",
+        "group": "11d4711b1164bb45",
+        "order": 40,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "d2c7caba894903e6",
+        "type": "inject",
+        "z": "9c4c7650ccd88332",
+        "name": "系统初始化",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "7cbbf49bbbccfc0a"
+            ]
+        ]
+    },
+    {
+        "id": "8ba89099c3053b2f",
+        "type": "mysql",
+        "z": "9c4c7650ccd88332",
+        "mydb": "mysql-config-chart",
+        "name": "MySQL数据库",
+        "x": 840,
+        "y": 680,
+        "wires": [
+            [
+                "dc884af14263de89"
+            ]
+        ]
+    },
+    {
+        "id": "910ab04adaba9e88",
+        "type": "ui_button",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "group": "batch-group",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "全部打开",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "green",
+        "icon": "power",
+        "payload": "all_on",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "b74fb18efa86a129"
+            ]
+        ]
+    },
+    {
+        "id": "ae880c467a747fb3",
+        "type": "ui_button",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "group": "batch-group",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "全部关闭",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "icon": "power_off",
+        "payload": "all_off",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "b74fb18efa86a129"
+            ]
+        ]
+    },
+    {
+        "id": "b3779989cac87e03",
+        "type": "ui_button",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "group": "batch-group",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "只开灯",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "blue",
+        "icon": "lightbulb",
+        "payload": "lights_on",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "b74fb18efa86a129"
+            ]
+        ]
+    },
+    {
+        "id": "be1b0458d51f72a7",
+        "type": "ui_button",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "group": "batch-group",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "只开空调",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "#ff9800",
+        "icon": "ac_unit",
+        "payload": "ac_on",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "b74fb18efa86a129"
+            ]
+        ]
+    },
+    {
+        "id": "e51eeed4e2cf3c3e",
+        "type": "inject",
+        "z": "9c4c7650ccd88332",
+        "name": "每30秒生成电量",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 5,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "ed242811de22cfb5"
+            ]
+        ]
+    },
+    {
+        "id": "5db3744144049b43",
+        "type": "inject",
+        "z": "9c4c7650ccd88332",
+        "name": "每小时自动聚合",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 5,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "3fed39bed9b553b1"
+            ]
+        ]
+    },
+    {
+        "id": "c92f90f6b9d98044",
+        "type": "inject",
+        "z": "9c4c7650ccd88332",
+        "name": "每10秒刷新",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "20",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 2,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "219847748fb98af0"
+            ]
+        ]
+    },
+    {
+        "id": "ee73cf553f2cc822",
+        "type": "ui_text",
+        "z": "9c4c7650ccd88332",
+        "group": "realtime-group",
+        "order": 4,
+        "width": "12",
+        "height": "2",
+        "name": "",
+        "label": "测试文本",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 980,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "faaca49fcc69bda8",
+        "type": "inject",
+        "z": "9c4c7650ccd88332",
+        "name": "测试注入",
+        "props": [
+            {
+                "p": "payload",
+                "v": "🎉 UI测试成功！智能家居系统正在运行...",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 2,
+        "topic": "",
+        "x": 640,
+        "y": 1720,
+        "wires": [
+            [
+                "ee73cf553f2cc822"
+            ]
+        ]
+    },
+    {
+        "id": "ed242811de22cfb5",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "生成电量数据",
+        "func": "const devices = [\n    { id: 'light_001', power: 60, factor: 0.001, name: '客厅主灯' },\n    { id: 'light_002', power: 40, factor: 0.001, name: '卧室灯' },\n    { id: 'light_003', power: 30, factor: 0.001, name: '厨房灯' },\n    { id: 'fan_001', power: 75, factor: 0.002, name: '客厅风扇' },\n    { id: 'fan_002', power: 60, factor: 0.002, name: '卧室风扇' },\n    { id: 'ac_001', power: 1500, factor: 0.01, name: '客厅空调' },\n    { id: 'ac_002', power: 1200, factor: 0.01, name: '卧室空调' }\n];\n\nlet insertValues = [];\nlet debugMsg = \"生成电量数据:\\n\";\n\nfor (const device of devices) {\n    const status = flow.get(`device_${device.id}_status`) || 'off';\n    \n    debugMsg += `${device.name}: ${status}\\n`;\n    \n    if (status == 'on') {\n        // 生成模拟用电数据（更真实的范围）\n        const usage = (device.power * device.factor * (0.3 + Math.random() * 0.4)) / 100;\n        insertValues.push(`('${device.id}', ${usage.toFixed(4)})`);\n        debugMsg += `  → 用电量: ${usage.toFixed(4)} 度\\n`;\n    }\n}\n\nif (insertValues.length > 0) {\n    const sql = `INSERT INTO power_consumption (device_id, power_usage) VALUES ${insertValues.join(', ')}`;\n    msg.topic = sql;\n    delete msg.payload;\n    node.warn(debugMsg);\n} else {\n    msg.topic = \"SELECT 1\";\n    delete msg.payload;\n    node.warn(\"没有设备开启，不生成电量数据\");\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 600,
+        "wires": [
+            [
+                "8ba89099c3053b2f"
+            ]
+        ]
+    },
+    {
+        "id": "7cbbf49bbbccfc0a",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "初始化设备状态",
+        "func": "const sql = \"UPDATE devices SET status = 'off' WHERE device_id IN ('light_001', 'light_002', 'light_003', 'fan_001', 'fan_002', 'ac_001', 'ac_002')\";\nmsg.topic = sql;\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "8ba89099c3053b2f"
+            ]
+        ]
+    },
+    {
+        "id": "3fed39bed9b553b1",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "自动聚合函数",
+        "func": "// 每小时自动聚合所有统计数据\nconst now = new Date();\n\n// 1. 聚合小时数据\nconst hourlySql = `INSERT INTO hourly_stats (device_id, hour_start, total_power, avg_power, max_power, min_power, record_count) \n                SELECT device_id, DATE_FORMAT(timestamp, '%Y-%m-%d %H:00:00') as hour_start, \n                SUM(power_usage) as total_power, \n                AVG(power_usage) as avg_power, \n                MAX(power_usage) as max_power, \n                MIN(power_usage) as min_power, \n                COUNT(*) as record_count \n                FROM power_consumption \n                WHERE timestamp >= DATE_SUB(NOW(), INTERVAL 1 HOUR) \n                GROUP BY device_id, DATE_FORMAT(timestamp, '%Y-%m-%d %H:00:00') \n                ON DUPLICATE KEY UPDATE \n                total_power = VALUES(total_power), \n                avg_power = VALUES(avg_power), \n                max_power = VALUES(max_power), \n                min_power = VALUES(min_power), \n                record_count = VALUES(record_count)`;\n\n// 2. 聚合日数据\nconst dailySql = `INSERT INTO daily_stats (device_id, date, total_power, avg_power, max_power, min_power, record_count) \n                SELECT device_id, DATE(timestamp) as date, \n                SUM(power_usage) as total_power, \n                AVG(power_usage) as avg_power, \n                MAX(power_usage) as max_power, \n                MIN(power_usage) as min_power, \n                COUNT(*) as record_count \n                FROM power_consumption \n                WHERE DATE(timestamp) = DATE(NOW() - INTERVAL 1 DAY) \n                GROUP BY device_id, DATE(timestamp) \n                ON DUPLICATE KEY UPDATE \n                total_power = VALUES(total_power), \n                avg_power = VALUES(avg_power), \n                max_power = VALUES(max_power), \n                min_power = VALUES(min_power), \n                record_count = VALUES(record_count)`;\n\n// 3. 聚合周数据（每周日执行）\nlet weeklySql = \"\";\nif (now.getDay() === 0) { // 周日\n    weeklySql = `INSERT INTO weekly_stats (device_id, week_start, week_number, total_power, avg_power, max_power, min_power, record_count) \n                SELECT device_id, DATE(DATE_SUB(timestamp, INTERVAL WEEKDAY(timestamp) DAY)) as week_start, \n                WEEK(timestamp) as week_number, \n                SUM(power_usage) as total_power, \n                AVG(power_usage) as avg_power, \n                MAX(power_usage) as max_power, \n                MIN(power_usage) as min_power, \n                COUNT(*) as record_count \n                FROM power_consumption \n                WHERE WEEK(timestamp) = WEEK(NOW() - INTERVAL 1 WEEK) \n                GROUP BY device_id, week_start, week_number \n                ON DUPLICATE KEY UPDATE \n                total_power = VALUES(total_power), \n                avg_power = VALUES(avg_power), \n                max_power = VALUES(max_power), \n                min_power = VALUES(min_power), \n                record_count = VALUES(record_count)`;\n}\n\n// 4. 聚合月数据（每月1号执行）\nlet monthlySql = \"\";\nif (now.getDate() === 1) { // 每月1号\n    monthlySql = `INSERT INTO monthly_stats (device_id, month_start, month_number, total_power, avg_power, max_power, min_power, record_count) \n                SELECT device_id, DATE_FORMAT(timestamp, '%Y-%m-01') as month_start, \n                MONTH(timestamp) as month_number, \n                SUM(power_usage) as total_power, \n                AVG(power_usage) as avg_power, \n                MAX(power_usage) as max_power, \n                MIN(power_usage) as min_power, \n                COUNT(*) as record_count \n                FROM power_consumption \n                WHERE MONTH(timestamp) = MONTH(NOW() - INTERVAL 1 MONTH) \n                GROUP BY device_id, month_start, month_number \n                ON DUPLICATE KEY UPDATE \n                total_power = VALUES(total_power), \n                avg_power = VALUES(avg_power), \n                max_power = VALUES(max_power), \n                min_power = VALUES(min_power), \n                record_count = VALUES(record_count)`;\n}\n\n// 执行所有聚合SQL\nconst sqlArray = [];\nif (hourlySql) sqlArray.push({topic: hourlySql});\nif (dailySql) sqlArray.push({topic: dailySql});\nif (weeklySql) sqlArray.push({topic: weeklySql});\nif (monthlySql) sqlArray.push({topic: monthlySql});\n\nreturn [sqlArray];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 760,
+        "wires": [
+            [
+                "8ba89099c3053b2f"
+            ]
+        ]
+    },
+    {
+        "id": "d7aeadacc95f5aed",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "流状态更新器",
+        "func": "// 更新流上下文并触发相关操作\nif (msg.topic === 'update_flow_status' && msg.payload) {\n    // 更新所有设备状态到流上下文\n    msg.payload.forEach(update => {\n        flow.set(`device_${update.deviceId}_status`, update.status);\n    });\n    \n    // 立即触发实时数据查询\n    const triggerMsg = {\n        topic: 'SELECT 1',  // 触发查询的简单SQL\n        trigger: 'immediate'\n    };\n    \n    // 强制立即执行一次实时查询\n    setTimeout(() => {\n        node.send([null, triggerMsg]);\n    }, 100);\n    \n    return [[], triggerMsg];\n}\n\nreturn [null, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 480,
+        "wires": [
+            [],
+            [
+                "219847748fb98af0"
+            ]
+        ]
+    },
+    {
+        "id": "219847748fb98af0",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "实时数据查询",
+        "func": "// 构建实时数据查询SQL，使用topic传递\nconst sql = `SELECT d.device_id, d.device_name, d.device_type, d.status, \n    CASE \n        WHEN d.status = 'on' THEN COALESCE(SUM(p.power_usage), 0)\n        ELSE 0 \n    END as total_power \n    FROM devices d \n    LEFT JOIN power_consumption p ON d.device_id = p.device_id \n        AND p.timestamp >= NOW() - INTERVAL 2 MINUTE \n    GROUP BY d.device_id, d.device_name, d.device_type, d.status \n    ORDER BY d.device_type, d.device_name`;\n\nmsg.topic = sql;\ndelete msg.payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 700,
+        "wires": [
+            [
+                "8ba89099c3053b2f"
+            ]
+        ]
+    },
+    {
+        "id": "7640f178a17ae561",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "客厅主灯",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "客厅主灯",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "7efd8c4b16251b73",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "卧室灯",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "卧室灯",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "4d9a6ec50189b00b",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "厨房灯",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "厨房灯",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "c26cf6c2349276ed",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "客厅风扇",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "客厅风扇",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "1d1984d1ade74e18",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "卧室风扇",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "卧室风扇",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "b4aa2f7be839dd17",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "客厅空调",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "客厅空调",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "6045a8ec8ade228b",
+        "type": "ui_switch",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "label": "卧室空调",
+        "tooltip": "",
+        "group": "control-group",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "卧室空调",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "red",
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "0b2b6a81f2aec767"
+            ]
+        ]
+    },
+    {
+        "id": "0b2b6a81f2aec767",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "设备控制处理",
+        "func": "const label = msg.label || msg.topic;\n\nconst deviceMap = {\n    \"客厅主灯\": \"light_001\",\n    \"卧室灯\": \"light_002\",\n    \"厨房灯\": \"light_003\",\n    \"客厅风扇\": \"fan_001\",\n    \"卧室风扇\": \"fan_002\",\n    \"客厅空调\": \"ac_001\",\n    \"卧室空调\": \"ac_002\"\n};\n\nconst deviceId = deviceMap[label];\nif (!deviceId) return [null, null];\n\nconst status = msg.payload;\nflow.set(`device_${deviceId}_status`, status);\n\nconst sql = `UPDATE devices SET status = '${status}', updated_at = NOW() WHERE device_id = '${deviceId}'`;\nconst sqlMsg = {topic: sql};\n\nconst triggerMsg = {\n    topic: 'device_control_trigger',\n    deviceId: deviceId,\n    status: status,\n    label: label,\n    timestamp: new Date().toISOString()\n};\n\nreturn [sqlMsg, triggerMsg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "8ba89099c3053b2f"
+            ],
+            [
+                "601f6bc7fe99a9b4"
+            ]
+        ]
+    },
+    {
+        "id": "601f6bc7fe99a9b4",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "立即触发器",
+        "func": "if (msg.topic === 'device_control_trigger') {\n    flow.set(`device_${msg.deviceId}_status`, msg.status);\n    \n    setTimeout(() => {\n        const queryMsg = {\n            topic: 'trigger_immediate_query',\n            deviceId: msg.deviceId,\n            status: msg.status\n        };\n        node.send([null, queryMsg]);\n    }, 200);\n}\n\nreturn [];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [],
+            [
+                "219847748fb98af0"
+            ]
+        ]
+    },
+    {
+        "id": "b74fb18efa86a129",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "批量控制处理",
+        "func": "const actions = {\n    'all_on': {\n        'light_001': {status: 'on', label: '客厅主灯'},\n        'light_002': {status: 'on', label: '卧室灯'},\n        'light_003': {status: 'on', label: '厨房灯'},\n        'fan_001': {status: 'on', label: '客厅风扇'},\n        'fan_002': {status: 'on', label: '卧室风扇'},\n        'ac_001': {status: 'on', label: '客厅空调'},\n        'ac_002': {status: 'on', label: '卧室空调'}\n    },\n    'all_off': {\n        'light_001': {status: 'off', label: '客厅主灯'},\n        'light_002': {status: 'off', label: '卧室灯'},\n        'light_003': {status: 'off', label: '厨房灯'},\n        'fan_001': {status: 'off', label: '客厅风扇'},\n        'fan_002': {status: 'off', label: '卧室风扇'},\n        'ac_001': {status: 'off', label: '客厅空调'},\n        'ac_002': {status: 'off', label: '卧室空调'}\n    },\n    'lights_on': {\n        'light_001': {status: 'on', label: '客厅主灯'},\n        'light_002': {status: 'on', label: '卧室灯'},\n        'light_003': {status: 'on', label: '厨房灯'},\n        'fan_001': {status: 'off', label: '客厅风扇'},\n        'fan_002': {status: 'off', label: '卧室风扇'},\n        'ac_001': {status: 'off', label: '客厅空调'},\n        'ac_002': {status: 'off', label: '卧室空调'}\n    },\n    'ac_on': {\n        'light_001': {status: 'off', label: '客厅主灯'},\n        'light_002': {status: 'off', label: '卧室灯'},\n        'light_003': {status: 'off', label: '厨房灯'},\n        'fan_001': {status: 'off', label: '客厅风扇'},\n        'fan_002': {status: 'off', label: '卧室风扇'},\n        'ac_001': {status: 'on', label: '客厅空调'},\n        'ac_002': {status: 'on', label: '卧室空调'}\n    }\n};\n\nconst action = actions[msg.payload];\nif (!action) return [null, null, null];\n\nlet sqlUpdates = [];\nlet flowUpdates = [];\nlet uiUpdates = [];\n\nfor (const deviceId in action) {\n    const deviceInfo = action[deviceId];\n    const status = deviceInfo.status;\n    const label = deviceInfo.label;\n    \n    // 更新流状态\n    flow.set(`device_${deviceId}_status`, status);\n    flowUpdates.push({deviceId: deviceId, status: status});\n    \n    // 生成SQL更新\n    sqlUpdates.push(`UPDATE devices SET status = '${status}', updated_at = NOW() WHERE device_id = '${deviceId}'`);\n    \n    // 生成UI更新消息\n    uiUpdates.push({\n        topic: 'ui_update',\n        label: label,\n        payload: status,\n        deviceId: deviceId\n    });\n}\n\nconst sql = sqlUpdates.join('; ');\nconst sqlMsg = {topic: sql};\n\nconst flowMsg = {\n    topic: 'update_flow_status',\n    payload: flowUpdates\n};\n\n// 输出到三个端口：SQL更新、流状态更新、UI开关更新\nreturn [sqlMsg, flowMsg, uiUpdates];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "8ba89099c3053b2f"
+            ],
+            [
+                "d7aeadacc95f5aed"
+            ],
+            [
+                "0d97f4992acdbf7d"
+            ]
+        ]
+    },
+    {
+        "id": "0d97f4992acdbf7d",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "UI开关同步",
+        "func": "// 如果是数组，处理多个开关更新\nif (Array.isArray(msg)) {\n    // 将数组中的每个消息单独发送\n    for (const uiMsg of msg) {\n        node.send([uiMsg]);\n    }\n    return [];\n}\n\n// 如果是单个消息，直接转发\nif (msg.topic === 'ui_update') {\n    // 延迟一点时间，确保流状态已更新\n    setTimeout(() => {\n        const syncMsg = {\n            topic: msg.topic,\n            label: msg.label,\n            payload: msg.payload,\n            deviceId: msg.deviceId\n        };\n        node.send([syncMsg]);\n    }, 100);\n}\n\nreturn [];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 520,
+        "wires": [
+            [
+                "1f2b08da6b348615"
+            ]
+        ]
+    },
+    {
+        "id": "1f2b08da6b348615",
+        "type": "switch",
+        "z": "9c4c7650ccd88332",
+        "name": "开关消息分发器",
+        "property": "label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "客厅主灯",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "卧室灯",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "厨房灯",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "客厅风扇",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "卧室风扇",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "客厅空调",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "卧室空调",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "7640f178a17ae561"
+            ],
+            [
+                "7efd8c4b16251b73"
+            ],
+            [
+                "4d9a6ec50189b00b"
+            ],
+            [
+                "c26cf6c2349276ed"
+            ],
+            [
+                "1d1984d1ade74e18"
+            ],
+            [
+                "b4aa2f7be839dd17"
+            ],
+            [
+                "6045a8ec8ade228b"
+            ]
+        ]
+    },
+    {
+        "id": "dc884af14263de89",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "统一数据库结果处理器",
+        "func": "// 统一处理所有MySQL查询结果\nif (!msg.payload || !msg.topic) {\n    return [null, null];\n}\n\nconst topic = msg.topic.toString();\n\n// 1. 处理统计查询结果\nif (Array.isArray(msg.payload)) {\n    // 通过statType识别统计查询\n    if (msg.statType) {\n        // 统计查询结果，发送到统计处理器\n        return [msg, null];\n    }\n    \n    // 通过topic识别统计表查询\n    if (topic.includes('hourly_stats') || topic.includes('FROM hourly_stats') || \n        topic.includes('daily_stats') || topic.includes('FROM daily_stats') ||\n        topic.includes('weekly_stats') || topic.includes('FROM weekly_stats') ||\n        topic.includes('monthly_stats') || topic.includes('FROM monthly_stats')) {\n        \n        // 提取统计类型\n        let statType = '';\n        if (topic.includes('hourly_stats') || topic.includes('FROM hourly_stats')) {\n            statType = 'hourly';\n        } else if (topic.includes('daily_stats') || topic.includes('FROM daily_stats')) {\n            statType = 'daily';\n        } else if (topic.includes('weekly_stats') || topic.includes('FROM weekly_stats')) {\n            statType = 'weekly';\n        } else if (topic.includes('monthly_stats') || topic.includes('FROM monthly_stats')) {\n            statType = 'monthly';\n        }\n        \n        msg.statType = statType;\n        return [msg, null];\n    }\n}\n\n// 2. 实时数据查询结果\nif (topic.includes('SELECT d.device_id')) {\n    return [null, msg];\n}\n\n// 3. 其他查询结果\nreturn [null, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 620,
+        "wires": [
+            [],
+            [
+                "a7d54e3048822f91"
+            ]
+        ]
+    },
+    {
+        "id": "a1032cfba8482f9f",
+        "type": "ui_gauge",
+        "z": "9c4c7650ccd88332",
+        "name": "",
+        "group": "realtime-group",
+        "order": 1,
+        "width": "6",
+        "height": "2",
+        "gtype": "gage",
+        "title": "当前总用电量",
+        "label": "度",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1460,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2adca403000078bb",
+        "type": "ui_text",
+        "z": "9c4c7650ccd88332",
+        "group": "realtime-group",
+        "order": 2,
+        "width": "12",
+        "height": "6",
+        "name": "",
+        "label": "设备状态",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1460,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a7d54e3048822f91",
+        "type": "function",
+        "z": "9c4c7650ccd88332",
+        "name": "增强实时处理器",
+        "func": "// 增强的实时数据处理，确保总是显示当前流上下文中的设备状态\nlet deviceStatus = \"<h4>设备实时状态</h4>\";\nlet totalPower = 0;\n\n// 从流上下文读取所有设备状态\nconst devices = [\n    {id: 'light_001', name: '客厅主灯'},\n    {id: 'light_002', name: '卧室灯'},\n    {id: 'light_003', name: '厨房灯'},\n    {id: 'fan_001', name: '客厅风扇'},\n    {id: 'fan_002', name: '卧室风扇'},\n    {id: 'ac_001', name: '客厅空调'},\n    {id: 'ac_002', name: '卧室空调'}\n];\n\n// 如果有数据库数据，使用数据库数据；否则使用流上下文状态\nif (msg.payload && Array.isArray(msg.payload)) {\n    // 使用数据库返回的数据\n    for (const row of msg.payload) {\n        const power = parseFloat(row.total_power) || 0;\n        const status = row.status || 'off';\n        \n        if (status === 'on') {\n            totalPower += power;\n        }\n        \n        const statusIcon = status === 'on' ? '●' : '○';\n        const statusColor = status === 'on' ? 'green' : 'red';\n        const statusText = status === 'on' ? '开启' : '关闭';\n        deviceStatus += `<p><span style=\"color:${statusColor}; font-weight:bold;\">${statusIcon}</span> ${row.device_name}: ${statusText} - ${power.toFixed(4)} 度</p>`;\n    }\n} else {\n    // 使用流上下文状态\n    for (const device of devices) {\n        const status = flow.get(`device_${device.id}_status`) || 'off';\n        const power = status === 'on' ? (Math.random() * 0.1).toFixed(4) : 0;\n        \n        if (status === 'on') {\n            totalPower += parseFloat(power);\n        }\n        \n        const statusIcon = status === 'on' ? '●' : '○';\n        const statusColor = status === 'on' ? 'green' : 'red';\n        const statusText = status === 'on' ? '开启' : '关闭';\n        deviceStatus += `<p><span style=\"color:${statusColor}; font-weight:bold;\">${statusIcon}</span> ${device.name}: ${statusText} - ${power} 度</p>`;\n    }\n}\n\ndeviceStatus += `<p><strong>总用电量: ${totalPower.toFixed(4)} 度</strong></p>`;\n\n// 更新仪表盘和状态文本\nconst gaugeMsg = {\n    payload: totalPower.toFixed(4)\n};\n\nconst statusMsg = {\n    payload: deviceStatus\n};\n\nreturn [gaugeMsg, statusMsg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 620,
+        "wires": [
+            [
+                "a1032cfba8482f9f"
+            ],
+            [
+                "2adca403000078bb"
+            ]
+        ]
+    },
+    {
+        "id": "3e894740e753c4d7",
+        "type": "mysql",
+        "z": "b0cddfc99580a27e",
+        "mydb": "mysql-config-chart",
+        "name": "MySQL数据库",
+        "x": 940,
+        "y": 280,
+        "wires": [
+            [
+                "c01653147269a1a3"
+            ]
+        ]
+    },
+    {
+        "id": "c01653147269a1a3",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "数据库结果处理器",
+        "func": "if (msg.topic && msg.topic.includes('小时数据生成完成')) {\n    node.send([{topic: '显示消息', payload: msg.topic}]);\n}\nelse if (msg.topic && msg.topic.includes('日数据生成完成')) {\n    node.send([{topic: '显示消息', payload: msg.topic}]);\n}\nelse if (msg.topic && msg.topic.includes('周数据生成完成')) {\n    node.send([{topic: '显示消息', payload: msg.topic}]);\n}\nelse if (msg.topic && msg.topic.includes('月数据生成完成')) {\n    node.send([{topic: '显示消息', payload: msg.topic}]);\n}\nelse if (msg.payload && msg.payload.affectedRows !== undefined) {\n    node.send([{topic: '显示消息', payload: `SQL执行成功，影响行数: ${msg.payload.affectedRows}`}]);\n}\nreturn [null, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 280,
+        "wires": [
+            [
+                "b411dcd57d48ed9a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "64a34b714dd5ac0d",
+        "type": "ui_button",
+        "z": "b0cddfc99580a27e",
+        "name": "",
+        "group": "f8ddc721c22a0681",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "生成小时统计数据",
+        "tooltip": "生成过去24小时的小时统计数据",
+        "color": "white",
+        "bgcolor": "#2196F3",
+        "className": "",
+        "icon": "schedule",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "generate_hourly",
+        "topicType": "str",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "56b5cfa743b96b7e"
+            ]
+        ]
+    },
+    {
+        "id": "9042217a38989cbc",
+        "type": "ui_button",
+        "z": "b0cddfc99580a27e",
+        "name": "",
+        "group": "f8ddc721c22a0681",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "生成日统计数据",
+        "tooltip": "生成过去7天的日统计数据",
+        "color": "white",
+        "bgcolor": "#4CAF50",
+        "icon": "today",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "generate_daily",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "54fcd551ab4331a3"
+            ]
+        ]
+    },
+    {
+        "id": "2985ddcd147baecb",
+        "type": "ui_button",
+        "z": "b0cddfc99580a27e",
+        "name": "",
+        "group": "f8ddc721c22a0681",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "生成周统计数据",
+        "tooltip": "生成过去8周的周统计数据",
+        "color": "white",
+        "bgcolor": "#FF9800",
+        "icon": "date_range",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "generate_weekly",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "e5e5b8572f272999"
+            ]
+        ]
+    },
+    {
+        "id": "729d746ad3ebfc4c",
+        "type": "ui_button",
+        "z": "b0cddfc99580a27e",
+        "name": "",
+        "group": "f8ddc721c22a0681",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "生成月统计数据",
+        "tooltip": "生成过去6个月的月统计数据",
+        "color": "white",
+        "bgcolor": "#9C27B0",
+        "icon": "calendar_today",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "generate_monthly",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "314837cfbedac6d4"
+            ]
+        ]
+    },
+    {
+        "id": "ddc5bac30a03ee61",
+        "type": "ui_button",
+        "z": "b0cddfc99580a27e",
+        "name": "",
+        "group": "f8ddc721c22a0681",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "一键生成所有统计数据",
+        "tooltip": "生成小时、日、周、月所有统计数据",
+        "color": "white",
+        "bgcolor": "#607D8B",
+        "icon": "play_arrow",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "generate_all",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "49902895892983ac"
+            ]
+        ]
+    },
+    {
+        "id": "1062297c6cc7513d",
+        "type": "ui_button",
+        "z": "b0cddfc99580a27e",
+        "name": "",
+        "group": "f8ddc721c22a0681",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "清空统计表数据",
+        "tooltip": "清空小时、日、周、月统计表",
+        "color": "white",
+        "bgcolor": "#F44336",
+        "icon": "delete",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "clear_data",
+        "x": 140,
+        "y": 340,
+        "wires": [
+            [
+                "e4bc4162813fc38a"
+            ]
+        ]
+    },
+    {
+        "id": "56b5cfa743b96b7e",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "生成小时数据",
+        "func": "const deviceIds = ['light_001', 'light_002', 'light_003', 'fan_001', 'fan_002', 'ac_001', 'ac_002'];\nconst devicePowers = {\n    'light_001': 0.075,\n    'light_002': 0.059,\n    'light_003': 0.032,\n    'fan_001': 0.152,\n    'fan_002': 0.121,\n    'ac_001': 1.423,\n    'ac_002': 1.135\n};\n\nconst now = new Date();\nlet sqlQueries = [];\n\nfor (let hourOffset = 0; hourOffset < 24; hourOffset++) {\n    const hourStart = new Date(now.getTime() - (hourOffset * 60 * 60 * 1000));\n    hourStart.setMinutes(0, 0, 0);\n    \n    const hourStr = hourStart.toISOString().slice(0, 19).replace('T', ' ');\n    \n    deviceIds.forEach(deviceId => {\n        const basePower = devicePowers[deviceId];\n        const variation = 0.1 + Math.random() * 0.3;\n        const totalPower = basePower * variation;\n        const avgPower = totalPower / 60;\n        const maxPower = avgPower * (1.2 + Math.random() * 0.3);\n        const minPower = avgPower * (0.7 + Math.random() * 0.2);\n        const recordCount = Math.floor(30 + Math.random() * 30);\n        \n        const sql = `INSERT INTO hourly_stats (device_id, hour_start, total_power, avg_power, max_power, min_power, record_count) ` +\n                   `VALUES ('${deviceId}', '${hourStr}', ${totalPower.toFixed(4)}, ${avgPower.toFixed(4)}, ${maxPower.toFixed(4)}, ${minPower.toFixed(4)}, ${recordCount}) ` +\n                   `ON DUPLICATE KEY UPDATE total_power = VALUES(total_power), avg_power = VALUES(avg_power), max_power = VALUES(max_power), min_power = VALUES(min_power), record_count = VALUES(record_count)`;\n        \n        sqlQueries.push(sql);\n    });\n}\n\nconst sql = sqlQueries.join('; ');\nmsg.topic = sql;\ndelete msg.payload;\n\nreturn [msg, {topic: '小时数据生成完成，共生成' + (sqlQueries.length) + '条记录'}];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "3e894740e753c4d7"
+            ],
+            [
+                "b411dcd57d48ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "54fcd551ab4331a3",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "生成日数据",
+        "func": "const deviceIds = ['light_001', 'light_002', 'light_003', 'fan_001', 'fan_002', 'ac_001', 'ac_002'];\nconst deviceMultipliers = {\n    'light_001': 1.0,\n    'light_002': 0.8,\n    'light_003': 0.6,\n    'fan_001': 2.0,\n    'fan_002': 1.6,\n    'ac_001': 20.0,\n    'ac_002': 16.0\n};\n\nconst now = new Date();\nlet sqlQueries = [];\n\nfor (let dayOffset = 0; dayOffset < 7; dayOffset++) {\n    const currentDate = new Date(now.getTime() - (dayOffset * 24 * 60 * 60 * 1000));\n    const dateStr = currentDate.toISOString().slice(0, 10);\n    \n    deviceIds.forEach(deviceId => {\n        const baseMultiplier = deviceMultipliers[deviceId];\n        const dailyVariation = 0.7 + Math.random() * 0.6;\n        const totalPower = baseMultiplier * dailyVariation;\n        const avgPower = totalPower / 1440;\n        const maxPower = avgPower * (1.5 + Math.random() * 0.5);\n        const minPower = avgPower * (0.5 + Math.random() * 0.3);\n        const recordCount = Math.floor(1000 + Math.random() * 500);\n        \n        const sql = `INSERT INTO daily_stats (device_id, date, total_power, avg_power, max_power, min_power, record_count) ` +\n                   `VALUES ('${deviceId}', '${dateStr}', ${totalPower.toFixed(4)}, ${avgPower.toFixed(4)}, ${maxPower.toFixed(4)}, ${minPower.toFixed(4)}, ${recordCount}) ` +\n                   `ON DUPLICATE KEY UPDATE total_power = VALUES(total_power), avg_power = VALUES(avg_power), max_power = VALUES(max_power), min_power = VALUES(min_power), record_count = VALUES(record_count)`;\n        \n        sqlQueries.push(sql);\n    });\n}\n\nconst sql = sqlQueries.join('; ');\nmsg.topic = sql;\ndelete msg.payload;\n\nreturn [msg, {topic: '日数据生成完成，共生成' + (sqlQueries.length) + '条记录'}];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "3e894740e753c4d7"
+            ],
+            [
+                "b411dcd57d48ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "e5e5b8572f272999",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "生成周数据",
+        "func": "const deviceIds = ['light_001', 'light_002', 'light_003', 'fan_001', 'fan_002', 'ac_001', 'ac_002'];\nconst deviceMultipliers = {\n    'light_001': 7.0,\n    'light_002': 5.6,\n    'light_003': 4.2,\n    'fan_001': 14.0,\n    'fan_002': 11.2,\n    'ac_001': 140.0,\n    'ac_002': 112.0\n};\n\nconst now = new Date();\nlet sqlQueries = [];\n\nfor (let weekOffset = 0; weekOffset < 8; weekOffset++) {\n    const weekStartDate = new Date(now.getTime() - (weekOffset * 7 * 24 * 60 * 60 * 1000));\n    const weekStart = weekStartDate.toISOString().slice(0, 10);\n    const weekNumber = getWeekNumber(weekStartDate);\n    \n    deviceIds.forEach(deviceId => {\n        const baseMultiplier = deviceMultipliers[deviceId];\n        const weeklyVariation = 0.6 + Math.random() * 0.8;\n        const totalPower = baseMultiplier * weeklyVariation;\n        const avgPower = totalPower / (7 * 1440);\n        const maxPower = avgPower * (1.8 + Math.random() * 0.7);\n        const minPower = avgPower * (0.4 + Math.random() * 0.4);\n        const recordCount = Math.floor(7000 + Math.random() * 3000);\n        \n        const sql = `INSERT INTO weekly_stats (device_id, week_start, week_number, total_power, avg_power, max_power, min_power, record_count) ` +\n                   `VALUES ('${deviceId}', '${weekStart}', ${weekNumber}, ${totalPower.toFixed(4)}, ${avgPower.toFixed(4)}, ${maxPower.toFixed(4)}, ${minPower.toFixed(4)}, ${recordCount}) ` +\n                   `ON DUPLICATE KEY UPDATE total_power = VALUES(total_power), avg_power = VALUES(avg_power), max_power = VALUES(max_power), min_power = VALUES(min_power), record_count = VALUES(record_count)`;\n        \n        sqlQueries.push(sql);\n    });\n}\n\nconst sql = sqlQueries.join('; ');\nmsg.topic = sql;\ndelete msg.payload;\n\nfunction getWeekNumber(date) {\n    const firstDayOfYear = new Date(date.getFullYear(), 0, 1);\n    const pastDaysOfYear = (date - firstDayOfYear) / 86400000;\n    return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);\n}\n\nreturn [msg, {topic: '周数据生成完成，共生成' + (sqlQueries.length) + '条记录'}];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "3e894740e753c4d7"
+            ],
+            [
+                "b411dcd57d48ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "314837cfbedac6d4",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "生成月数据",
+        "func": "const deviceIds = ['light_001', 'light_002', 'light_003', 'fan_001', 'fan_002', 'ac_001', 'ac_002'];\nconst deviceMultipliers = {\n    'light_001': 30.0,\n    'light_002': 24.0,\n    'light_003': 18.0,\n    'fan_001': 60.0,\n    'fan_002': 48.0,\n    'ac_001': 600.0,\n    'ac_002': 480.0\n};\n\nconst now = new Date();\nlet sqlQueries = [];\n\nfor (let monthOffset = 0; monthOffset < 6; monthOffset++) {\n    const monthDate = new Date(now.getFullYear(), now.getMonth() - monthOffset, 1);\n    const monthStart = monthDate.toISOString().slice(0, 10);\n    const monthNumber = monthDate.getMonth() + 1;\n    \n    deviceIds.forEach(deviceId => {\n        const baseMultiplier = deviceMultipliers[deviceId];\n        const monthlyVariation = 0.5 + Math.random() * 1.0;\n        const totalPower = baseMultiplier * monthlyVariation;\n        const avgPower = totalPower / (30 * 1440);\n        const maxPower = avgPower * (2.0 + Math.random() * 1.0);\n        const minPower = avgPower * (0.3 + Math.random() * 0.4);\n        const recordCount = Math.floor(30000 + Math.random() * 15000);\n        \n        const sql = `INSERT INTO monthly_stats (device_id, month_start, month_number, total_power, avg_power, max_power, min_power, record_count) ` +\n                   `VALUES ('${deviceId}', '${monthStart}', ${monthNumber}, ${totalPower.toFixed(4)}, ${avgPower.toFixed(4)}, ${maxPower.toFixed(4)}, ${minPower.toFixed(4)}, ${recordCount}) ` +\n                   `ON DUPLICATE KEY UPDATE total_power = VALUES(total_power), avg_power = VALUES(avg_power), max_power = VALUES(max_power), min_power = VALUES(min_power), record_count = VALUES(record_count)`;\n        \n        sqlQueries.push(sql);\n    });\n}\n\nconst sql = sqlQueries.join('; ');\nmsg.topic = sql;\ndelete msg.payload;\n\nreturn [msg, {topic: '月数据生成完成，共生成' + (sqlQueries.length) + '条记录'}];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "3e894740e753c4d7"
+            ],
+            [
+                "b411dcd57d48ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "49902895892983ac",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "一键生成所有数据",
+        "func": "const now = new Date();\nconst delay = 1000;\n\nsetTimeout(() => {\n    node.send([{topic: 'generate_hourly'}]);\n}, delay);\n\nsetTimeout(() => {\n    node.send([{topic: 'generate_daily'}]);\n}, delay * 2);\n\nsetTimeout(() => {\n    node.send([{topic: 'generate_weekly'}]);\n}, delay * 3);\n\nsetTimeout(() => {\n    node.send([{topic: 'generate_monthly'}]);\n}, delay * 4);\n\nreturn [{topic: '开始一键生成所有统计数据...'}];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "b411dcd57d48ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "e4bc4162813fc38a",
+        "type": "function",
+        "z": "b0cddfc99580a27e",
+        "name": "清空统计数据",
+        "func": "const sql = `TRUNCATE TABLE hourly_stats; TRUNCATE TABLE daily_stats; TRUNCATE TABLE weekly_stats; TRUNCATE TABLE monthly_stats;`;\nmsg.topic = sql;\ndelete msg.payload;\n\nreturn [msg, {topic: '统计表数据已清空'}];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "3e894740e753c4d7"
+            ],
+            [
+                "b411dcd57d48ed9a"
+            ]
+        ]
+    },
+    {
+        "id": "b411dcd57d48ed9a",
+        "type": "ui_text",
+        "z": "b0cddfc99580a27e",
+        "group": "f8ddc721c22a0681",
+        "order": 7,
+        "width": "6",
+        "height": "4",
+        "name": "",
+        "label": "操作日志",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 780,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5d6b2a1a91131cb3",
+        "type": "ui_template",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "页面标题",
+        "order": 2,
+        "width": 12,
+        "height": 1,
+        "format": "<div style=\"padding: 15px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 20px;\">\n  <h3 style=\"margin: 0; font-weight: 500; color: #333;\">家庭用电量统计</h3>\n  <p style=\"margin: 5px 0 0 0; color: #666; font-size: 14px;\">各设备用电数据分析</p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 180,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c12212c0e477b2bc",
+        "type": "ui_template",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "查询按钮区域",
+        "order": 5,
+        "width": 12,
+        "height": 1,
+        "format": "<div style=\"margin-bottom: 20px;\">\n  <div style=\"color: #666; font-size: 14px; margin-bottom: 8px;\">数据查询</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b524b4d4d952ae2",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "小时统计",
+        "tooltip": "查询最近24小时的小时统计数据",
+        "color": "white",
+        "bgcolor": "#2196F3",
+        "className": "",
+        "icon": "",
+        "payload": "hourly",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "55f80de5f4adfecc"
+            ]
+        ]
+    },
+    {
+        "id": "ad28f28943ae899f",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "日统计",
+        "tooltip": "查询最近30天的日统计数据",
+        "color": "white",
+        "bgcolor": "#4CAF50",
+        "className": "",
+        "icon": "",
+        "payload": "daily",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 240,
+        "y": 160,
+        "wires": [
+            [
+                "55f80de5f4adfecc"
+            ]
+        ]
+    },
+    {
+        "id": "9107bdc14a04b62d",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "周统计",
+        "tooltip": "查询最近12周的周统计数据",
+        "color": "white",
+        "bgcolor": "#FF9800",
+        "className": "",
+        "icon": "",
+        "payload": "weekly",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "55f80de5f4adfecc"
+            ]
+        ]
+    },
+    {
+        "id": "860b263118f7bd7f",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 11,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "月统计",
+        "tooltip": "查询最近12个月的月统计数据",
+        "color": "white",
+        "bgcolor": "#9C27B0",
+        "className": "",
+        "icon": "",
+        "payload": "monthly",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 440,
+        "y": 160,
+        "wires": [
+            [
+                "55f80de5f4adfecc"
+            ]
+        ]
+    },
+    {
+        "id": "6d5ee4374a5dda79",
+        "type": "ui_template",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "测试按钮区域",
+        "order": 14,
+        "width": 12,
+        "height": 1,
+        "format": "<div style=\"margin: 15px 0 20px 0;\">\n  <div style=\"color: #666; font-size: 14px; margin-bottom: 8px;\">测试数据</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51facde3ebdaa8b1",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 17,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "测试(小时)",
+        "tooltip": "显示小时统计测试数据",
+        "color": "white",
+        "bgcolor": "#2196F3",
+        "className": "",
+        "icon": "",
+        "payload": "hourly",
+        "payloadType": "str",
+        "topic": "",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "8af8747f1c77eabf"
+            ]
+        ]
+    },
+    {
+        "id": "e614907b7206877e",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 18,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "测试(日)",
+        "tooltip": "显示日统计测试数据",
+        "color": "white",
+        "bgcolor": "#4CAF50",
+        "className": "",
+        "icon": "",
+        "payload": "daily",
+        "payloadType": "str",
+        "topic": "",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "8af8747f1c77eabf"
+            ]
+        ]
+    },
+    {
+        "id": "f4a7bdbe8b3aa014",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 19,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "测试(周)",
+        "tooltip": "显示周统计测试数据",
+        "color": "white",
+        "bgcolor": "#FF9800",
+        "className": "",
+        "icon": "",
+        "payload": "weekly",
+        "payloadType": "str",
+        "topic": "",
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "8af8747f1c77eabf"
+            ]
+        ]
+    },
+    {
+        "id": "791a045083c63afc",
+        "type": "ui_button",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "",
+        "group": "333aa5a9bd9ce156",
+        "order": 20,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "测试(月)",
+        "tooltip": "显示月统计测试数据",
+        "color": "white",
+        "bgcolor": "#9C27B0",
+        "className": "",
+        "icon": "",
+        "payload": "monthly",
+        "payloadType": "str",
+        "topic": "",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "8af8747f1c77eabf"
+            ]
+        ]
+    },
+    {
+        "id": "55f80de5f4adfecc",
+        "type": "function",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "统计查询构建器",
+        "func": "const statType = msg.payload;\nlet querySql = \"\";\nlet chartType = \"line\";\nlet chartLabel = \"用电统计\";\nlet xformat = \"HH:mm\";\n\nswitch(statType) {\n    case 'hourly':\n        querySql = \"SELECT h.device_id, h.hour_start, h.total_power, h.avg_power, h.max_power, h.min_power, h.record_count, d.device_name FROM hourly_stats h JOIN devices d ON h.device_id = d.device_id WHERE h.hour_start >= DATE_SUB(NOW(), INTERVAL 24 HOUR) ORDER BY h.hour_start, d.device_name LIMIT 100\";\n        chartType = \"line\";\n        chartLabel = \"小时用电统计\";\n        xformat = \"HH:mm\";\n        break;\n    case 'daily':\n        querySql = \"SELECT d_s.device_id, d_s.date, d_s.total_power, d_s.avg_power, d_s.max_power, d_s.min_power, d_s.record_count, d.device_name FROM daily_stats d_s JOIN devices d ON d_s.device_id = d.device_id WHERE d_s.date >= DATE_SUB(NOW(), INTERVAL 30 DAY) ORDER BY d_s.date, d.device_name LIMIT 100\";\n        chartType = \"bar\";\n        chartLabel = \"日用电统计\";\n        xformat = \"MM-DD\";\n        break;\n    case 'weekly':\n        querySql = \"SELECT w.device_id, w.week_start, w.week_number, w.total_power, w.avg_power, w.max_power, w.min_power, w.record_count, d.device_name FROM weekly_stats w JOIN devices d ON w.device_id = d.device_id WHERE w.week_start >= DATE_SUB(NOW(), INTERVAL 12 WEEK) ORDER BY w.week_start, d.device_name LIMIT 100\";\n        chartType = \"bar\";\n        chartLabel = \"周用电统计\";\n        xformat = \"第W周\";\n        break;\n    case 'monthly':\n        querySql = \"SELECT m.device_id, m.month_start, m.month_number, m.total_power, m.avg_power, m.max_power, m.min_power, m.record_count, d.device_name FROM monthly_stats m JOIN devices d ON m.device_id = d.device_id WHERE m.month_start >= DATE_SUB(NOW(), INTERVAL 12 MONTH) ORDER BY m.month_start, d.device_name LIMIT 100\";\n        chartType = \"bar\";\n        chartLabel = \"月用电统计\";\n        xformat = \"YYYY-MM\";\n        break;\n    default:\n        return [null, null];\n}\n\nconst queryMsg = { \n    topic: querySql,\n    statType: statType,\n    chartType: chartType,\n    chartLabel: chartLabel,\n    xformat: xformat\n};\n\nreturn [queryMsg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "7611ec949d0705a8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7611ec949d0705a8",
+        "type": "mysql",
+        "z": "5838f3f1c3b4cb4f",
+        "mydb": "mysql-config-chart",
+        "name": "MySQL数据库",
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "af382ed21ff545e9",
+                "31b738b3e6b7b717"
+            ]
+        ]
+    },
+    {
+        "id": "af382ed21ff545e9",
+        "type": "function",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "图表数据处理",
+        "func": "if (!msg.payload || !Array.isArray(msg.payload)) {\n    node.warn('数据库无返回数据或数据格式错误');\n    const emptyMsg = {\n        topic: 'chart',\n        payload: [],\n        statType: msg.statType || 'hourly'\n    };\n    return [emptyMsg];\n}\n\nif (msg.payload.length === 0) {\n    node.warn('数据库返回空数据');\n    const emptyMsg = {\n        topic: 'chart',\n        payload: [],\n        statType: msg.statType || 'hourly'\n    };\n    return [emptyMsg];\n}\n\nconst statType = msg.statType || 'hourly';\nconst chartType = msg.chartType || 'line';\nconst chartLabel = msg.chartLabel || '用电统计';\nconst xformat = msg.xformat || 'HH:mm';\n\nnode.warn(`处理${statType}统计数据，共${msg.payload.length}条记录`);\n\nconst deviceColors = {\n    'light_001': '#FF6384',\n    'light_002': '#36A2EB',\n    'light_003': '#FFCE56',\n    'fan_001': '#4BC0C0',\n    'fan_002': '#9966FF',\n    'ac_001': '#FF9F40',\n    'ac_002': '#C9CBCF'\n};\n\nconst deviceDisplayNames = {\n    'light_001': '客厅主灯',\n    'light_002': '卧室灯',\n    'light_003': '厨房灯',\n    'fan_001': '客厅风扇',\n    'fan_002': '卧室风扇',\n    'ac_001': '客厅空调',\n    'ac_002': '卧室空调'\n};\n\nconst deviceMap = {};\nconst timeLabels = new Map();\nconst deviceTimeData = {};\n\nfor (const row of msg.payload) {\n    if (!row.device_id) continue;\n    \n    const deviceId = row.device_id;\n    const deviceName = deviceDisplayNames[deviceId] || row.device_name || deviceId;\n    \n    if (!deviceMap[deviceId]) {\n        deviceMap[deviceId] = {\n            name: deviceName,\n            color: deviceColors[deviceId] || '#999999'\n        };\n    }\n    \n    let timeKey = '';\n    let timeLabel = '';\n    \n    if (row.hour_start) {\n        try {\n            const date = new Date(row.hour_start);\n            timeKey = date.toISOString();\n            const hours = date.getHours().toString().padStart(2, '0');\n            const minutes = date.getMinutes().toString().padStart(2, '0');\n            timeLabel = `${hours}:${minutes}`;\n        } catch (e) {\n            continue;\n        }\n    } else if (row.date) {\n        try {\n            const date = new Date(row.date);\n            timeKey = date.toISOString().split('T')[0];\n            const month = (date.getMonth() + 1).toString().padStart(2, '0');\n            const day = date.getDate().toString().padStart(2, '0');\n            timeLabel = `${month}-${day}`;\n        } catch (e) {\n            continue;\n        }\n    } else if (row.week_start) {\n        try {\n            const date = new Date(row.week_start);\n            timeKey = date.toISOString().split('T')[0];\n            timeLabel = `第${row.week_number || '0'}周`;\n        } catch (e) {\n            continue;\n        }\n    } else if (row.month_start) {\n        try {\n            const date = new Date(row.month_start);\n            timeKey = date.toISOString().split('T')[0];\n            const year = date.getFullYear();\n            const month = (date.getMonth() + 1).toString().padStart(2, '0');\n            timeLabel = `${year}-${month}`;\n        } catch (e) {\n            continue;\n        }\n    }\n    \n    if (!timeKey || !timeLabel) continue;\n    \n    timeLabels.set(timeKey, timeLabel);\n    \n    if (!deviceTimeData[deviceId]) {\n        deviceTimeData[deviceId] = {};\n    }\n    \n    const totalPower = parseFloat(row.total_power) || 0;\n    deviceTimeData[deviceId][timeKey] = totalPower;\n}\n\nif (timeLabels.size === 0) {\n    node.warn('没有有效的时间数据');\n    const emptyMsg = {\n        topic: 'chart',\n        payload: [],\n        statType: statType\n    };\n    return [emptyMsg];\n}\n\nconst sortedTimeKeys = Array.from(timeLabels.keys()).sort();\nconst labels = sortedTimeKeys.map(key => timeLabels.get(key));\n\nconst chartData = {\n    series: [],\n    data: [],\n    labels: labels,\n    options: {\n        legend: { display: true },\n        scales: {\n            y: { \n                beginAtZero: true,\n                title: {\n                    display: true,\n                    text: '总用电量 (度)'\n                }\n            }\n        }\n    }\n};\n\nfor (const deviceId in deviceMap) {\n    const device = deviceMap[deviceId];\n    chartData.series.push(device.name);\n    \n    const seriesData = [];\n    for (const timeKey of sortedTimeKeys) {\n        const powerValue = deviceTimeData[deviceId] && deviceTimeData[deviceId][timeKey] ? deviceTimeData[deviceId][timeKey] : 0;\n        seriesData.push(powerValue);\n    }\n    chartData.data.push(seriesData);\n}\n\nconst resultMsg = {\n    topic: 'chart',\n    payload: [chartData],\n    statType: statType,\n    chartType: chartType,\n    chartLabel: chartLabel,\n    xformat: xformat\n};\n\nnode.warn(`生成图表数据: ${chartData.series.length}个设备, ${labels.length}个时间点`);\n\nreturn [resultMsg];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 200,
+        "wires": [
+            [
+                "d5e71f9672265055"
+            ]
+        ]
+    },
+    {
+        "id": "d5e71f9672265055",
+        "type": "switch",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "图表分发器",
+        "property": "statType",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "hourly",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "daily",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "weekly",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "monthly",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 910,
+        "y": 300,
+        "wires": [
+            [
+                "f246f63a5531e983"
+            ],
+            [
+                "a697a78ecf36c4ec"
+            ],
+            [
+                "fdabfdc3c0566bd6"
+            ],
+            [
+                "c8abcd387c0eacd2"
+            ]
+        ]
+    },
+    {
+        "id": "f246f63a5531e983",
+        "type": "ui_chart",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "小时用电统计图",
+        "group": "333aa5a9bd9ce156",
+        "order": 23,
+        "width": 12,
+        "height": 6,
+        "label": "小时用电统计",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "点击上方按钮查询小时数据",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#4BC0C0",
+            "#9966FF",
+            "#FF9F40",
+            "#C9CBCF"
+        ],
+        "outputs": 0,
+        "x": 1180,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a697a78ecf36c4ec",
+        "type": "ui_chart",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "日用电统计图",
+        "group": "333aa5a9bd9ce156",
+        "order": 37,
+        "width": 12,
+        "height": 6,
+        "label": "日用电统计",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "MM-DD",
+        "interpolate": "linear",
+        "nodata": "点击上方按钮查询日数据",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#4BC0C0",
+            "#9966FF",
+            "#FF9F40",
+            "#C9CBCF"
+        ],
+        "outputs": 0,
+        "x": 1180,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fdabfdc3c0566bd6",
+        "type": "ui_chart",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "周用电统计图",
+        "group": "333aa5a9bd9ce156",
+        "order": 51,
+        "width": 12,
+        "height": 6,
+        "label": "周用电统计",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "第W周",
+        "interpolate": "linear",
+        "nodata": "点击上方按钮查询周数据",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#4BC0C0",
+            "#9966FF",
+            "#FF9F40",
+            "#C9CBCF"
+        ],
+        "outputs": 0,
+        "x": 1180,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c8abcd387c0eacd2",
+        "type": "ui_chart",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "月用电统计图",
+        "group": "333aa5a9bd9ce156",
+        "order": 65,
+        "width": 12,
+        "height": 6,
+        "label": "月用电统计",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "YYYY-MM",
+        "interpolate": "linear",
+        "nodata": "点击上方按钮查询月数据",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#4BC0C0",
+            "#9966FF",
+            "#FF9F40",
+            "#C9CBCF"
+        ],
+        "outputs": 0,
+        "x": 1180,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d0b4bdcc2b870702",
+        "type": "inject",
+        "z": "5838f3f1c3b4cb4f",
+        "d": true,
+        "name": "生成测试数据",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 2,
+        "topic": "",
+        "payload": "test",
+        "payloadType": "str",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "8af8747f1c77eabf"
+            ]
+        ]
+    },
+    {
+        "id": "8af8747f1c77eabf",
+        "type": "function",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "生成测试统计数据",
+        "func": "const devices = [\n    { id: 'light_001', name: '客厅主灯', color: '#FF6384' },\n    { id: 'light_002', name: '卧室灯', color: '#36A2EB' },\n    { id: 'light_003', name: '厨房灯', color: '#FFCE56' },\n    { id: 'fan_001', name: '客厅风扇', color: '#4BC0C0' },\n    { id: 'fan_002', name: '卧室风扇', color: '#9966FF' },\n    { id: 'ac_001', name: '客厅空调', color: '#FF9F40' },\n    { id: 'ac_002', name: '卧室空调', color: '#C9CBCF' }\n];\n\nconst now = new Date();\n\nconst testChartData = {\n    series: devices.map(d => d.name),\n    labels: [],\n    data: [],\n    options: {\n        legend: { display: true },\n        scales: {\n            y: { \n                beginAtZero: true,\n                title: {\n                    display: true,\n                    text: '总用电量 (度)'\n                }\n            }\n        }\n    }\n};\n\nif (msg.payload === 'hourly' || msg.payload === 'test') {\n    testChartData.labels = ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'];\n    testChartData.data = devices.map(device => {\n        const basePower = device.id.includes('ac') ? 2.5 : \n                         device.id.includes('fan') ? 0.8 : 0.3;\n        return testChartData.labels.map((_, i) => {\n            const variation = 0.5 + Math.random() * 1.0;\n            const timeFactor = i < 2 || i > 4 ? 0.7 : 1.3;\n            return (basePower * variation * timeFactor).toFixed(2);\n        });\n    });\n    \n    return [{ \n        topic: 'chart',\n        payload: [testChartData],\n        statType: 'hourly',\n        chartType: 'line',\n        chartLabel: '小时用电统计(测试数据)',\n        xformat: 'HH:mm'\n    }];\n}\n\nif (msg.payload === 'daily') {\n    testChartData.labels = ['01-10', '01-11', '01-12', '01-13', '01-14', '01-15', '01-16'];\n    testChartData.data = devices.map(device => {\n        const basePower = device.id.includes('ac') ? 15 : \n                         device.id.includes('fan') ? 5 : 2;\n        return testChartData.labels.map((_, i) => {\n            const variation = 0.6 + Math.random() * 0.8;\n            const dayFactor = i === 5 || i === 6 ? 1.5 : 1.0;\n            return (basePower * variation * dayFactor).toFixed(2);\n        });\n    });\n    \n    return [{ \n        topic: 'chart',\n        payload: [testChartData],\n        statType: 'daily',\n        chartType: 'bar',\n        chartLabel: '日用电统计(测试数据)',\n        xformat: 'MM-DD'\n    }];\n}\n\nif (msg.payload === 'weekly') {\n    testChartData.labels = ['第1周', '第2周', '第3周', '第4周', '第5周', '第6周'];\n    testChartData.data = devices.map(device => {\n        const basePower = device.id.includes('ac') ? 80 : \n                         device.id.includes('fan') ? 30 : 12;\n        return testChartData.labels.map((_, i) => {\n            const variation = 0.7 + Math.random() * 0.6;\n            const weekFactor = i > 3 ? 1.2 : 0.9;\n            return (basePower * variation * weekFactor).toFixed(2);\n        });\n    });\n    \n    return [{ \n        topic: 'chart',\n        payload: [testChartData],\n        statType: 'weekly',\n        chartType: 'bar',\n        chartLabel: '周用电统计(测试数据)',\n        xformat: '第W周'\n    }];\n}\n\nif (msg.payload === 'monthly') {\n    testChartData.labels = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06'];\n    testChartData.data = devices.map(device => {\n        const basePower = device.id.includes('ac') ? 350 : \n                         device.id.includes('fan') ? 130 : 50;\n        return testChartData.labels.map((_, i) => {\n            const variation = 0.8 + Math.random() * 0.4;\n            const monthFactor = i < 2 ? 0.7 : i > 4 ? 1.3 : 1.0;\n            return (basePower * variation * monthFactor).toFixed(2);\n        });\n    });\n    \n    return [{ \n        topic: 'chart',\n        payload: [testChartData],\n        statType: 'monthly',\n        chartType: 'bar',\n        chartLabel: '月用电统计(测试数据)',\n        xformat: 'YYYY-MM'\n    }];\n}\n\nreturn [null];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "d5e71f9672265055"
+            ]
+        ]
+    },
+    {
+        "id": "1b05aa7174d32346",
+        "type": "function",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "处理用电统计数据(仅表格)",
+        "func": "if (!msg || !msg.statType) {\n    return [null, null, null, null];\n}\n\nif (!msg.payload || !Array.isArray(msg.payload)) {\n    node.warn(`statType: ${msg.statType}, payload不是数组`);\n    return [null, null, null, null];\n}\n\nif (msg.payload.length === 0) {\n    node.warn(`statType: ${msg.statType}, payload数组为空`);\n    return [null, null, null, null];\n}\n\nconst statType = msg.statType;\nnode.warn(`处理${statType}统计数据，记录数: ${msg.payload.length}`);\n\nconst tableData = [];\n\nfor (const row of msg.payload) {\n    let timeLabel = \"\";\n    \n    if (row.hour_start) {\n        const hourDate = new Date(row.hour_start);\n        timeLabel = `${hourDate.getFullYear()}-${(hourDate.getMonth()+1).toString().padStart(2, '0')}-${hourDate.getDate().toString().padStart(2, '0')} ${hourDate.getHours().toString().padStart(2, '0')}:00`;\n    } else if (row.date) {\n        const dateObj = new Date(row.date);\n        timeLabel = dateObj.toISOString().split('T')[0];\n    } else if (row.week_start) {\n        const weekDate = new Date(row.week_start);\n        timeLabel = `第${row.week_number || '0'}周 (${weekDate.getFullYear()}-${(weekDate.getMonth()+1).toString().padStart(2, '0')}-${weekDate.getDate().toString().padStart(2, '0')})`;\n    } else if (row.month_start) {\n        const monthDate = new Date(row.month_start);\n        timeLabel = `${monthDate.getFullYear()}-${(monthDate.getMonth()+1).toString().padStart(2, '0')}`;\n    }\n    \n    tableData.push({\n        time_period: timeLabel,\n        device_name: row.device_name,\n        total_power: (parseFloat(row.total_power) || 0).toFixed(4),\n        avg_power: (parseFloat(row.avg_power) || 0).toFixed(4),\n        max_power: (parseFloat(row.max_power) || 0).toFixed(4),\n        min_power: (parseFloat(row.min_power) || 0).toFixed(4),\n        record_count: row.record_count || 0\n    });\n}\n\nnode.warn(`生成表格数据: ${tableData.length}条记录`);\n\nconst outputMsg = { payload: tableData };\n\nswitch(statType) {\n    case 'hourly':\n        return [outputMsg, null, null, null];\n    case 'daily':\n        return [null, outputMsg, null, null];\n    case 'weekly':\n        return [null, null, outputMsg, null];\n    case 'monthly':\n        return [null, null, null, outputMsg];\n    default:\n        return [null, null, null, null];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            [
+                "f5f59020825f09fc"
+            ],
+            [
+                "b52ba6a6c8ea541f"
+            ],
+            [
+                "5061c4c7cf8163b3"
+            ],
+            [
+                "cdbef98652930392"
+            ]
+        ]
+    },
+    {
+        "id": "f5f59020825f09fc",
+        "type": "ui_table",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "",
+        "order": 24,
+        "width": 12,
+        "height": 6,
+        "columns": [
+            {
+                "field": "time_period",
+                "title": "时间段",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "device_name",
+                "title": "设备名称",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "total_power",
+                "title": "总用电(度)",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "avg_power",
+                "title": "平均用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "max_power",
+                "title": "最大用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "min_power",
+                "title": "最小用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "record_count",
+                "title": "记录数",
+                "width": "10%",
+                "align": "left"
+            }
+        ],
+        "outputs": 0,
+        "x": 1430,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b52ba6a6c8ea541f",
+        "type": "ui_table",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "",
+        "order": 38,
+        "width": 12,
+        "height": 6,
+        "columns": [
+            {
+                "field": "time_period",
+                "title": "日期",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "device_name",
+                "title": "设备名称",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "total_power",
+                "title": "总用电(度)",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "avg_power",
+                "title": "平均用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "max_power",
+                "title": "最大用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "min_power",
+                "title": "最小用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "record_count",
+                "title": "记录数",
+                "width": "10%",
+                "align": "left"
+            }
+        ],
+        "outputs": 0,
+        "x": 1430,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5061c4c7cf8163b3",
+        "type": "ui_table",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "",
+        "order": 52,
+        "width": 12,
+        "height": 6,
+        "columns": [
+            {
+                "field": "time_period",
+                "title": "周次",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "device_name",
+                "title": "设备名称",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "total_power",
+                "title": "总用电(度)",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "avg_power",
+                "title": "平均用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "max_power",
+                "title": "最大用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "min_power",
+                "title": "最小用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "record_count",
+                "title": "记录数",
+                "width": "10%",
+                "align": "left"
+            }
+        ],
+        "outputs": 0,
+        "x": 1430,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cdbef98652930392",
+        "type": "ui_table",
+        "z": "5838f3f1c3b4cb4f",
+        "group": "333aa5a9bd9ce156",
+        "name": "",
+        "order": 66,
+        "width": 12,
+        "height": 6,
+        "columns": [
+            {
+                "field": "time_period",
+                "title": "月份",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "device_name",
+                "title": "设备名称",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "total_power",
+                "title": "总用电(度)",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "avg_power",
+                "title": "平均用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "max_power",
+                "title": "最大用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "min_power",
+                "title": "最小用电",
+                "width": "15%",
+                "align": "left"
+            },
+            {
+                "field": "record_count",
+                "title": "记录数",
+                "width": "10%",
+                "align": "left"
+            }
+        ],
+        "outputs": 0,
+        "x": 1430,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "31b738b3e6b7b717",
+        "type": "function",
+        "z": "5838f3f1c3b4cb4f",
+        "name": "统一数据库结果处理器",
+        "func": "if (!msg.topic) {\n    return [null, null];\n}\n\nconst topic = msg.topic.toString();\n\nif (topic.includes('hourly_stats') || topic.includes('daily_stats') || topic.includes('weekly_stats') || topic.includes('monthly_stats')) {\n    let statType = '';\n    if (topic.includes('hourly_stats')) {\n        statType = 'hourly';\n    } else if (topic.includes('daily_stats')) {\n        statType = 'daily';\n    } else if (topic.includes('weekly_stats')) {\n        statType = 'weekly';\n    } else if (topic.includes('monthly_stats')) {\n        statType = 'monthly';\n    }\n    \n    if (statType) {\n        msg.statType = statType;\n        return [msg, null];\n    }\n}\n\nif (topic.includes('SELECT d.device_id')) {\n    return [null, msg];\n}\n\nreturn [null, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 460,
+        "wires": [
+            [
+                "1b05aa7174d32346"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1e90a03db9ef4e6f",
+        "type": "inject",
+        "z": "aa431b6950d07102",
+        "name": "手动触发测试报警",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "simulate_alert",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "1c1736c0379527cb"
+            ]
+        ]
+    },
+    {
+        "id": "1c1736c0379527cb",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "生成模拟报警数据",
+        "func": "// 随机生成不同类型的报警数据\nconst alertTypes = [\n    { type: 'high_power', description: '高功率报警' },\n    { type: 'device_fault', description: '设备故障' },\n    { type: 'unusual_pattern', description: '异常用电模式' }\n];\n\nconst devices = [\n    { id: 'light_001', name: '客厅主灯' },\n    { id: 'light_002', name: '卧室灯' },\n    { id: 'light_003', name: '厨房灯' },\n    { id: 'fan_001', name: '客厅风扇' },\n    { id: 'fan_002', name: '卧室风扇' },\n    { id: 'ac_001', name: '客厅空调' },\n    { id: 'ac_002', name: '卧室空调' }\n];\n\n// 随机选择设备和报警类型\nconst device = devices[Math.floor(Math.random() * devices.length)];\nconst alertType = alertTypes[Math.floor(Math.random() * alertTypes.length)];\n\n// 生成报警消息\nlet alertMessage = '';\nlet powerValue = 0;\nlet threshold = 0;\n\nswitch(alertType.type) {\n    case 'high_power':\n        powerValue = (Math.random() * 5 + 2).toFixed(4); // 2-7度\n        threshold = (Math.random() * 2 + 1).toFixed(4);  // 1-3度\n        alertMessage = `设备 ${device.name} 用电异常！当前用电: ${powerValue} 度，超过阈值: ${threshold} 度`;\n        break;\n    case 'device_fault':\n        powerValue = 0;\n        threshold = 0;\n        alertMessage = `设备 ${device.name} 疑似故障！检测到异常状态，请立即检查`;\n        break;\n    case 'unusual_pattern':\n        powerValue = (Math.random() * 3 + 0.5).toFixed(4); // 0.5-3.5度\n        threshold = (Math.random() * 1 + 0.3).toFixed(4);  // 0.3-1.3度\n        alertMessage = `设备 ${device.name} 用电模式异常！当前用电: ${powerValue} 度，正常范围: ${threshold} 度以下`;\n        break;\n}\n\n// 生成SQL插入语句\nconst sql = `INSERT INTO alerts (device_id, alert_type, alert_message, power_value, threshold, status) VALUES ('${device.id}', '${alertType.type}', '${alertMessage}', ${powerValue}, ${threshold}, 'active')`;\n\nmsg.topic = sql;\ndelete msg.payload;\n\n// 保存报警信息供后续使用\nmsg.alertInfo = {\n    device_id: device.id,\n    device_name: device.name,\n    alert_type: alertType.type,\n    alert_type_desc: alertType.description,\n    alert_message: alertMessage,\n    power_value: parseFloat(powerValue),\n    threshold: parseFloat(threshold),\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "834c72f3c783bc12"
+            ]
+        ]
+    },
+    {
+        "id": "71314c095ec00610",
+        "type": "inject",
+        "z": "aa431b6950d07102",
+        "name": "定时刷新报警记录",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "f77008cdaa3ed76e"
+            ]
+        ]
+    },
+    {
+        "id": "f77008cdaa3ed76e",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "查询最新报警记录",
+        "func": "// 查询最近24小时内的报警记录\nconst sql = `SELECT \n    a.id,\n    a.device_id,\n    d.device_name,\n    a.alert_type,\n    a.alert_message,\n    a.power_value,\n    a.threshold,\n    a.status,\n    DATE_FORMAT(a.created_at, '%Y-%m-%d %H:%i:%s') as created_at\nFROM alerts a\nLEFT JOIN devices d ON a.device_id = d.device_id\nWHERE a.created_at >= DATE_SUB(NOW(), INTERVAL 24 HOUR)\nORDER BY a.created_at DESC\nLIMIT 50`;\n\nmsg.topic = sql;\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "834c72f3c783bc12"
+            ]
+        ]
+    },
+    {
+        "id": "dab9e21fcf7cbd12",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "处理数据库结果",
+        "func": "// 处理数据库返回结果\nif (!msg.topic) return [null, null];\n\nconst topic = msg.topic.toString();\n\n// 1. 报警记录查询结果\nif (topic.includes('FROM alerts') && topic.includes('JOIN devices')) {\n    // 发送到报警记录显示\n    return [msg, null];\n}\n\n// 2. 模拟报警数据插入结果\nif (topic.includes('INSERT INTO alerts')) {\n    // 保存最新的报警信息到流上下文\n    if (msg.alertInfo) {\n        flow.set('latest_alert', msg.alertInfo);\n        flow.set('has_new_alert', true);\n        \n        // 立即触发报警处理\n        const triggerMsg = {\n            topic: 'process_new_alert',\n            alertInfo: msg.alertInfo\n        };\n        \n        // 先返回查询结果，再发送触发消息\n        node.send([null, triggerMsg]);\n    }\n    return [null, null];\n}\n\n// 3. 清除报警结果\nif (topic.includes('UPDATE alerts SET status =')) {\n    // 清除报警后立即刷新列表\n    const triggerMsg = {\n        topic: 'refresh_alerts'\n    };\n    node.send([null, triggerMsg]);\n    return [null, null];\n}\n\nreturn [null, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 300,
+        "wires": [
+            [
+                "13cefde90a2f4621"
+            ],
+            [
+                "eaf3604b79b2a917"
+            ]
+        ]
+    },
+    {
+        "id": "13cefde90a2f4621",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "格式化报警记录",
+        "func": "// 格式化报警记录用于UI显示\nif (!msg.payload || !Array.isArray(msg.payload)) {\n    node.warn('没有收到有效的报警记录数据');\n    return [null, null];\n}\n\nnode.warn(`收到 ${msg.payload.length} 条报警记录`);\n\nlet tableData = [];\nlet hasActiveAlerts = false;\n\nfor (const row of msg.payload) {\n    // 转换报警类型为中文\n    let alertTypeText = '';\n    switch(row.alert_type) {\n        case 'high_power':\n            alertTypeText = '高功率'; break;\n        case 'device_fault':\n            alertTypeText = '设备故障'; break;\n        case 'unusual_pattern':\n            alertTypeText = '异常模式'; break;\n        default:\n            alertTypeText = row.alert_type;\n    }\n    \n    // 转换状态为中文\n    let statusText = row.status === 'active' ? '活动' : '已解决';\n    \n    tableData.push({\n        device_name: row.device_name || row.device_id,\n        alert_type: alertTypeText,\n        alert_message: row.alert_message,\n        power_value: row.power_value ? parseFloat(row.power_value).toFixed(4) : '0.0000',\n        threshold: row.threshold ? parseFloat(row.threshold).toFixed(4) : '0.0000',\n        status: statusText,\n        created_at: row.created_at\n    });\n    \n    if (row.status === 'active') {\n        hasActiveAlerts = true;\n    }\n}\n\n// 更新活动报警状态\nflow.set('has_active_alerts', hasActiveAlerts);\n\nreturn [\n    { payload: tableData },  // 表格数据\n    { \n        payload: hasActiveAlerts ? '⚠️ 有活动报警' : '✅ 无活动报警',\n        topic: 'alert_status'\n    }  // 状态指示\n];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 220,
+        "wires": [
+            [
+                "6026d63ff61bc9c6"
+            ],
+            [
+                "c505e25fbb71d12f"
+            ]
+        ]
+    },
+    {
+        "id": "c9828ff1d741158b",
+        "type": "ui_audio",
+        "z": "aa431b6950d07102",
+        "name": "报警喇叭",
+        "group": "11d4711b1164bb45",
+        "voice": "Microsoft Huihui - Chinese (Simplified, PRC)",
+        "always": false,
+        "x": 1240,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6026d63ff61bc9c6",
+        "type": "ui_table",
+        "z": "aa431b6950d07102",
+        "group": "11d4711b1164bb45",
+        "name": "报警记录表",
+        "order": 2,
+        "width": 12,
+        "height": 10,
+        "columns": [
+            {
+                "field": "device_name",
+                "title": "设备名称",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "alert_type",
+                "title": "报警类型",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "alert_message",
+                "title": "报警信息",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "power_value",
+                "title": "用电值",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "threshold",
+                "title": "阈值",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "status",
+                "title": "状态",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "created_at",
+                "title": "报警时间",
+                "width": "20px",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1280,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c505e25fbb71d12f",
+        "type": "ui_text",
+        "z": "aa431b6950d07102",
+        "group": "11d4711b1164bb45",
+        "order": 29,
+        "width": 6,
+        "height": 1,
+        "name": "报警状态",
+        "label": "当前状态",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1270,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "328b604c4c9d1c97",
+        "type": "ui_button",
+        "z": "aa431b6950d07102",
+        "name": "",
+        "group": "11d4711b1164bb45",
+        "order": 25,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "手动测试报警",
+        "tooltip": "点击生成模拟报警数据",
+        "color": "white",
+        "bgcolor": "#ff9800",
+        "className": "",
+        "icon": "warning",
+        "payload": "test",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "1e90a03db9ef4e6f"
+            ]
+        ]
+    },
+    {
+        "id": "e9c51560e2cdcadd",
+        "type": "ui_button",
+        "z": "aa431b6950d07102",
+        "name": "",
+        "group": "11d4711b1164bb45",
+        "order": 26,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "清除所有报警",
+        "tooltip": "将所有活动报警标记为已解决",
+        "color": "white",
+        "bgcolor": "#9e9e9e",
+        "className": "",
+        "icon": "clear_all",
+        "payload": "clear_all",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "25bdd8aca70156a9"
+            ]
+        ]
+    },
+    {
+        "id": "25bdd8aca70156a9",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "清除报警处理",
+        "func": "const sql = \"UPDATE alerts SET status = 'resolved', resolved_at = NOW() WHERE status = 'active' AND resolved_at IS NULL\";\nmsg.topic = sql;\nmsg.payload = \"正在清除所有活动报警...\";\n\n// 更新状态\nflow.set('has_active_alerts', false);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "834c72f3c783bc12"
+            ]
+        ]
+    },
+    {
+        "id": "d61334109af5a4f3",
+        "type": "ui_switch",
+        "z": "aa431b6950d07102",
+        "name": "",
+        "label": "邮件报警",
+        "tooltip": "开启/关闭邮件报警",
+        "group": "11d4711b1164bb45",
+        "order": 24,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "red",
+        "animate": true,
+        "className": "",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "e426bb18c46b2e37"
+            ]
+        ]
+    },
+    {
+        "id": "e426bb18c46b2e37",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "邮件设置处理",
+        "func": "flow.set('email_notification', msg.payload);\nreturn {\n    payload: `邮件报警已${msg.payload ? '开启' : '关闭'}`,\n    topic: 'setting_feedback'\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "e3ac3aae593a9231"
+            ]
+        ]
+    },
+    {
+        "id": "755711b9fd38e2ed",
+        "type": "ui_switch",
+        "z": "aa431b6950d07102",
+        "name": "",
+        "label": "声音报警",
+        "tooltip": "开启/关闭声音报警",
+        "group": "11d4711b1164bb45",
+        "order": 23,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "red",
+        "animate": true,
+        "className": "",
+        "x": 200,
+        "y": 480,
+        "wires": [
+            [
+                "d48dced767bd6a23"
+            ]
+        ]
+    },
+    {
+        "id": "d48dced767bd6a23",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "声音设置处理",
+        "func": "flow.set('sound_alert_enabled', msg.payload);\nreturn {\n    payload: `声音报警已${msg.payload ? '开启' : '关闭'}`,\n    topic: 'setting_feedback'\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "e3ac3aae593a9231"
+            ]
+        ]
+    },
+    {
+        "id": "e3ac3aae593a9231",
+        "type": "ui_text",
+        "z": "aa431b6950d07102",
+        "group": "11d4711b1164bb45",
+        "order": 33,
+        "width": 6,
+        "height": 1,
+        "name": "设置反馈",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 630,
+        "y": 450,
+        "wires": []
+    },
+    {
+        "id": "36a2c7a05cc07c86",
+        "type": "inject",
+        "z": "aa431b6950d07102",
+        "name": "初始化系统",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 2,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 20,
+        "wires": [
+            [
+                "c8ad9cbe79af7100"
+            ]
+        ]
+    },
+    {
+        "id": "c8ad9cbe79af7100",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "系统初始化",
+        "func": "// 初始化流上下文设置\nflow.set('email_notification', false);\nflow.set('sound_alert_enabled', true);\nflow.set('has_new_alert', false);\nflow.set('has_active_alerts', false);\n\nnode.warn('系统初始化完成');\n\n// 初始化UI\nreturn [\n    {\n        payload: \"✅ 智能家居报警系统已启动\",\n        topic: \"system_init\"\n    },\n    {\n        payload: false,\n        topic: \"email_setting\"\n    },\n    {\n        payload: true,\n        topic: \"sound_setting\"\n    }\n];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 20,
+        "wires": [
+            [
+                "d760413876e8c265"
+            ],
+            [
+                "d61334109af5a4f3"
+            ],
+            [
+                "755711b9fd38e2ed"
+            ]
+        ]
+    },
+    {
+        "id": "d760413876e8c265",
+        "type": "ui_text",
+        "z": "aa431b6950d07102",
+        "group": "11d4711b1164bb45",
+        "order": 36,
+        "width": 12,
+        "height": 1,
+        "name": "系统状态",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 680,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "716ae9c84241413b",
+        "type": "comment",
+        "z": "aa431b6950d07102",
+        "name": "智能家居报警系统",
+        "info": "功能说明：\n1. 支持手动注入模拟报警数据到SQL数据库\n2. 从SQL数据库实时获取报警记录并在UI表格显示\n3. 检测到新报警时触发喇叭和邮件双重报警\n4. 支持邮件和声音报警的开关控制\n5. 支持一键清除所有活动报警\n\n配置要求：\n1. 确保MySQL数据库中有smart_home数据库\n2. 确保有alerts表和devices表\n3. 配置邮件服务器信息（如需邮件报警）\n\n使用说明：\n1. 点击【手动测试报警】按钮生成模拟数据\n2. 报警数据会自动插入数据库\n3. 系统检测到新报警会自动触发报警\n4. 在【报警记录】页面查看所有报警\n5. 在【控制中心】页面进行系统设置",
+        "x": 200,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "aeed3808b8e01290",
+        "type": "ui_audio",
+        "z": "aa431b6950d07102",
+        "name": "报警语音测试",
+        "group": "11d4711b1164bb45",
+        "voice": "Microsoft Huihui - Chinese (Simplified, PRC)",
+        "always": false,
+        "x": 600,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "17cceb57659f461e",
+        "type": "ui_button",
+        "z": "aa431b6950d07102",
+        "name": "",
+        "group": "11d4711b1164bb45",
+        "order": 30,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "测试语音报警",
+        "tooltip": "测试语音报警功能",
+        "color": "white",
+        "bgcolor": "#2196f3",
+        "className": "",
+        "icon": "volume_up",
+        "payload": "voice_test",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "5a4477223dd4ba9f"
+            ]
+        ]
+    },
+    {
+        "id": "5a4477223dd4ba9f",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "测试语音报警",
+        "func": "const testMsg = {\n    payload: \"测试语音报警功能，如果听到此语音，说明语音报警功能正常。\",\n    topic: \"test_voice\"\n};\n\nnode.warn('发送语音测试消息');\nreturn testMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "aeed3808b8e01290"
+            ]
+        ]
+    },
+    {
+        "id": "2c931a4a9fc7c934",
+        "type": "ui_button",
+        "z": "aa431b6950d07102",
+        "name": "",
+        "group": "11d4711b1164bb45",
+        "order": 39,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "立即刷新报警记录",
+        "tooltip": "立即刷新报警记录表格",
+        "color": "white",
+        "bgcolor": "#4caf50",
+        "className": "",
+        "icon": "refresh",
+        "payload": "refresh",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "f77008cdaa3ed76e"
+            ]
+        ]
+    },
+    {
+        "id": "834c72f3c783bc12",
+        "type": "mysql",
+        "z": "aa431b6950d07102",
+        "mydb": "mysql-config-chart",
+        "name": "MySQL数据库",
+        "x": 660,
+        "y": 300,
+        "wires": [
+            [
+                "dab9e21fcf7cbd12"
+            ]
+        ]
+    },
+    {
+        "id": "94865a46cd8de3dc",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "邮件格式转换",
+        "func": "// 转换消息为邮件节点需要的格式\nif (!msg.payload) {\n    node.warn('邮件格式转换：没有payload');\n    return null;\n}\n\nnode.warn('正在格式化邮件消息');\n\n// 根据邮件截图中的格式，直接使用原始payload格式\n// 邮件截图显示邮件格式是完整的JSON格式\nconst mailMsg = {\n    from: \"智能家居系统\",\n    to: \"123\",\n    subject: msg.topic || \"智能家居报警\",\n    text: msg.payload\n};\n\nnode.warn('邮件格式转换完成，准备发送');\nreturn { payload: mailMsg };",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 560,
+        "wires": [
+            [
+                "6c043783c3efd62e"
+            ]
+        ]
+    },
+    {
+        "id": "eaf3604b79b2a917",
+        "type": "function",
+        "z": "aa431b6950d07102",
+        "name": "处理新报警",
+        "func": "// 处理新的报警\nif (msg.topic !== 'process_new_alert' || !msg.alertInfo) {\n    return [null, null, null];\n}\n\nconst latestAlert = msg.alertInfo;\nnode.warn(`处理新报警: ${latestAlert.device_name} - ${latestAlert.alert_type_desc}`);\n\n// 获取用户设置\nconst emailEnabled = flow.get('email_notification') || false;\nconst soundEnabled = flow.get('sound_alert_enabled') || true; // 默认为true\n\nlet emailMsg = null;\nlet soundMsg = null;\nlet uiAlertMsg = null;\n\n// 准备邮件内容 - 根据邮件截图格式\nif (emailEnabled) {\n    const currentTime = new Date().toLocaleString('zh-CN', {\n        year: 'numeric',\n        month: '2-digit',\n        day: '2-digit',\n        hour: '2-digit',\n        minute: '2-digit',\n        second: '2-digit',\n        hour12: false\n    }).replace(/\\//g, '/');\n    \n    // 根据邮件截图格式构造邮件内容\n    emailMsg = {\n        payload: `智能家居系统报警通知报警类型：${latestAlert.alert_type_desc}设备名称：${latestAlert.device_name}报警信息：${latestAlert.alert_message}用户姓名：0 度 邮箱：0 度 报警时间：${currentTime} 请及时处理！ 此邮件由智能家居系统自动发送`,\n        topic: `智能家居报警 - ${latestAlert.device_name}`\n    };\n    \n    node.warn('已生成邮件报警消息');\n}\n\n// 准备声音报警\nif (soundEnabled) {\n    soundMsg = {\n        payload: `检测到设备 ${latestAlert.device_name} 发生 ${latestAlert.alert_type_desc}，请立即检查！`,\n        topic: 'alert_notification'\n    };\n    node.warn('已生成声音报警消息');\n}\n\n// 准备UI报警通知\nuiAlertMsg = {\n    payload: {\n        topic: 'alert',\n        message: `设备 ${latestAlert.device_name} 发生 ${latestAlert.alert_type_desc}: ${latestAlert.alert_message}`,\n        width: '400px',\n        modal: false,\n        timeout: 10000\n    }\n};\nnode.warn('已生成UI报警消息');\n\nreturn [emailMsg, soundMsg, uiAlertMsg];",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "94865a46cd8de3dc"
+            ],
+            [
+                "c9828ff1d741158b"
+            ],
+            [
+                "2b31347f7921c991"
+            ]
+        ]
+    },
+    {
+        "id": "2b31347f7921c991",
+        "type": "change",
+        "z": "aa431b6950d07102",
+        "name": "UI报警格式转换",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 680,
+        "wires": [
+            [
+                "623e5b2172fad0ba"
+            ]
+        ]
+    },
+    {
+        "id": "623e5b2172fad0ba",
+        "type": "ui_toast",
+        "z": "aa431b6950d07102",
+        "displayTime": "10",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "确定",
+        "cancel": "",
+        "topic": "",
+        "name": "报警通知",
+        "x": 1420,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "6c043783c3efd62e",
+        "type": "e-mail",
+        "z": "aa431b6950d07102",
+        "server": "smtp.qq.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "2607034495@qq.com",
+        "dname": "",
+        "x": 1500,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c5f8f019cb551bc3",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-mysql": "1.0.3",
+            "node-red-node-ui-table": "0.4.5",
+            "node-red-node-email": "5.0.0"
+        }
+    }
+]
