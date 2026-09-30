@@ -1,2 +1,7 @@
-# 本项目为 Node-RED + MySQL，无 Python 依赖。
-# Node-RED 依赖见 README 的「环境要求」一节。
+# 本项目主体为 Node-RED + MySQL，无 Python 依赖。
+# Node-RED 依赖安装见 README 的「环境要求」一节：
+#   npm install node-red-dashboard node-red-node-mysql
+#
+# 以下依赖仅 scripts/generate_data.py（Python 造数备选方案）需要。
+# 主流程使用 sql/generate_history.sql 的存储过程造数，不需要安装任何 Python 包。
+pymysql>=1.1.0

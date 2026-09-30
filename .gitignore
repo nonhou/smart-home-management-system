@@ -9,3 +9,7 @@ venv/
 *.xls
 *.xlsx
 !data/sample_*.csv
+
+# Power BI：pbix 内以明文保存数据库凭据，不入库，只提交截图与建模文档
+*.pbix
+*.pbit
